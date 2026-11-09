@@ -30,6 +30,6 @@ $sql .= " ORDER BY books.title";
 
 $stmt = $pdo->prepare($sql);
 $stmt->execute($params);
-$books = $stmt->fetchAll(PDO::FLAGS_DEFAULT ? PDO::FETCH_ASSOC : PDO::FETCH_ASSOC);
+$books = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 echo json_encode($books);
